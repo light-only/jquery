@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery.js"></script>
+</head>
+<body>
+    <div class="box" style="background: blue;width: 200px;">111</div>
+    <div class="box" style="background: red;width: 200px;">111</div>
+    <script>
+        // $('.box').click(function(){
+        //     console.log('传入字符串');
+            
+        // })
+        // $(document.querySelector('.box')).click(function(){
+        //     console.log('传入对象');
+        // })
+        // $(function(){
+        //     console.log('传入函数');
+        // })
+        // $('.box').click(function(){
+        //     console.log('传入多个对象');
+        // })
+        // $('.box').on('mouseover mousedown',()=>{
+        //     console.log('多事件触发');
+        // })
+        // $('.box').css('background','blue');
+        // $('.box').css({'background':'red','height':'200px','width':'200px'});
+        // let res = $('.box').css('background');
+        //     console.log(res);
+        // let d = $.Deferred();
+        // console.log(d.state());
+        // const Deferred = function(){
+
+        // }
+        $('.box').animate({width:'800px'},2000,function(){
+             alert('跑完了')
+        });
+    </script>
+</body>
+</html>

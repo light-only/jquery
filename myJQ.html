@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./myJQ.js"></script>
+</head>
+<body>
+    <div class="box" style="background: blue; width: 100px; ">111</div>
+    <div class="box" style="background: red; width: 100px;">111</div>
+    <button>点击</button>
+    <script>
+        // $('.box').click(function(){
+        //     console.log('传入字符串');
+            
+        // })
+        // $(document.querySelector('.box')).click(function(){
+        //     console.log('传入对象');
+        // })
+        // $(function(){
+        //     console.log('传入函数');
+        // })
+        // $('.box').click(function(){
+        //     console.log('传入多个字符串');
+        //     console.log($('.box'));
+        // })
+        // $(document.querySelectorAll('.box')).click(()=>{
+        //     console.log('传入多个对象');
+        // })
+        // $('.box').on('mouseover mousedown',()=>{
+        //     console.log('多事件触发');
+        // })
+        //实现链式回滚
+        // let res = $('.box').eq(0).eq(0).end();
+        // console.log(res);
+        // $('.box').css('background','pink');
+        // let res = $('.box').css('background');
+        // console.log(res);
+        // $('.box').css({'background':'red','height':200,'width':200});
+        //通过外部扩展属性和方法
+    //     $.cssHooks.wh = {
+    //     get(ele){
+    //         return getComputedStyle(ele,null)['width'] +'-'+ this.getComputedStyle(ele,null)['height'];
+    //     },
+    //     set(ele,styleValue){
+    //          ele.style['width'] = styleValue;
+    //          ele.style['height'] = styleValue;
+    //     }
+    // };  
+    //     $('.box').css('wh','300px');
+    //封装animate方法
+    $('button').click(()=>{
+        $('.box').animate({width:'500px'},'fast',function(){
+            console.log('运动完成');
+        });
+    })
+    </script>
+</body>
+</html>
